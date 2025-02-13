@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   
+    <title>Formulario de Registro</title>
+   
+</head>
+<body>
+
+    <a href="#registro-form" class="skip-link">Saltar al formulario</a>
+
+    <header>
+        <h1>Registro de Usuario</h1>
+    </header>
+
+    <main id="registro-form">
+        <form aria-labelledby="formulario-registro" method="POST" action="/registro">
+            <h2 id="formulario-registro">Formulario de Registro</h2>
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" required aria-required="true" placeholder="Ingresa tu nombre completo">
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" required aria-required="true" placeholder="Ingresa tu correo electrónico">
+
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" name="contraseña" required aria-required="true" placeholder="Crea una contraseña">
+
+            <label for="confirmar-contraseña">Confirmar Contraseña</label>
+            <input type="password" id="confirmar-contraseña" name="confirmar-contraseña" required aria-required="true" placeholder="Confirma tu contraseña">
+
+            <label for="terminos">
+                <input type="checkbox" id="terminos" name="terminos" required aria-required="true">
+                Acepto los <a href="/terminos" aria-label="Leer los términos y condiciones">términos y condiciones</a>
+            </label>
+
+            <input type="submit" value="Registrar">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Formulario de Registro. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
