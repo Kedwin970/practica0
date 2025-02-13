@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Cámaras de Fotos</title>
+</head>
+<body>
+    <h1>Búsqueda de Cámaras de Fotos</h1>
+    <form action="/buscar" method="GET">
+        <label for="tipo-camara">Tipo de cámara:</label>
+        <select id="tipo-camara" name="tipo-camara">
+            <option value="">Seleccione un tipo</option>
+            <option value="reflex">Réflex</option>
+            <option value="mirrorless">Sin espejo (Mirrorless)</option>
+            <option value="compacta">Compacta</option>
+            <option value="accion">Cámara de acción</option>
+            <option value="drone">Cámara para drone</option>
+        </select>
+        <br><br>
+        <label for="precio-min">Precio mínimo:</label>
+        <input type="number" id="precio-min" name="precio-min" min="0" placeholder="Mínimo">
+        <label for="precio-max">Precio máximo:</label>
+        <input type="number" id="precio-max" name="precio-max" min="0" placeholder="Máximo">
+        <br><br>
+        <label for="marca">Marca:</label>
+        <select id="marca" name="marca">
+            <option value="">Seleccione una marca</option>
+            <option value="canon">Canon</option>
+            <option value="nikon">Nikon</option>
+            <option value="sony">Sony</option>
+            <option value="fujifilm">Fujifilm</option>
+            <option value="panasonic">Panasonic</option>
+            <option value="olympus">Olympus</option>
+        </select>
+        <br><br>
+        <label for="resolucion">Resolución mínima (en MP):</label>
+        <input type="number" id="resolucion" name="resolucion" min="0" placeholder="Ej: 20">
+        <br><br>
+        <label>Características adicionales:</label><br>
+        <input type="checkbox" id="estabilizacion" name="caracteristicas" value="estabilizacion">
+        <label for="estabilizacion">Estabilización de imagen</label><br>
+        <input type="checkbox" id="wifi" name="caracteristicas" value="wifi">
+        <label for="wifi">Wi-Fi integrado</label><br>
+        <input type="checkbox" id="4k" name="caracteristicas" value="4k">
+        <label for="4k">Grabación en 4K</label><br>
+        <input type="checkbox" id="pantalla-articulada" name="caracteristicas" value="pantalla-articulada">
+        <label for="pantalla-articulada">Pantalla articulada</label>
+        <br><br>
+        <button type="submit">Buscar</button>
+    </form>
+</body>
+</html>
