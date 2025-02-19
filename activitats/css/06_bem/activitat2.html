@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1 - Variables CSS</title>
+    <style>
+        :root {
+            --color-destacado: #D95B43; /* Color para el título y los hipervínculos */
+            --fuente-principal: Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--fuente-principal);
+        }
+
+        h1 {
+            color: var(--color-destacado);
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        a {
+            color: var(--color-destacado);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .rectangulo {
+            --altura: 100px; /* Definimos la altura como una variable local */
+            width: calc(var(--altura) * 2); /* La anchura es el doble de la altura */
+            height: var(--altura);
+            background-color: var(--color-destacado);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f4f4f4;
+        }
+
+        .header__logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--color-destacado);
+        }
+
+        .nav__list {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav__link {
+            color: var(--color-destacado);
+            text-decoration: none;
+        }
+
+        .search {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .search__input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search__button {
+            padding: 0.5rem 1rem;
+            background-color: var(--color-destacado);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comentarios {
+            margin-top: 2rem;
+        }
+
+        .comentario {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+
+        .comentario__autor {
+            font-weight: bold;
+            color: var(--color-destacado);
+        }
+
+        .comentario__texto {
+            margin-top: 0.5rem;
+        }
+
+        .comentario-form {
+            margin-top: 1rem;
+        }
+
+        .comentario-form__input, .comentario-form__textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .comentario-form__button {
+            padding: 0.5rem 1rem;
+            background-color: var(--color-destacado);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo">Mi Logo</div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="#" class="nav__link">Inicio</a></li>
+                <li><a href="#" class="nav__link">Servicios</a></li>
+                <li><a href="#" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+        <form class="search">
+            <input type="text" class="search__input" placeholder="Buscar...">
+            <button class="search__button">Buscar</button>
+        </form>
+    </header>
+
+    <h1>Bienvenido a mi página</h1>
+    <p>Este es un párrafo con algunos <a href="#">enlaces</a> de ejemplo. También puedes visitar <a href="#">este otro sitio</a>.</p>
+    <div class="rectangulo"></div>
+
+    <section class="comentarios">
+        <h2>Comentarios</h2>
+        <div class="comentario">
+            <div class="comentario__autor">Usuario1</div>
+            <div class="comentario__texto">¡Este es un comentario de ejemplo!</div>
+        </div>
+        <div class="comentario">
+            <div class="comentario__autor">Usuario2</div>
+            <div class="comentario__texto">¡Otro comentario interesante!</div>
+        </div>
+
+        <form class="comentario-form">
+            <input type="text" class="comentario-form__input" placeholder="Tu nombre">
+            <textarea class="comentario-form__textarea" placeholder="Escribe un comentario..."></textarea>
+            <button class="comentario-form__button">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>

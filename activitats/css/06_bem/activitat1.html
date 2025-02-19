@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1 - Variables CSS</title>
+    <style>
+        :root {
+            --color-destacado: #D95B43;
+            --fuente-principal: Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--fuente-principal);
+        }
+
+        h1 {
+            color: var(--color-destacado);
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        a {
+            color: var(--color-destacado);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .rectangulo {
+            --altura: 100px; 
+            width: calc(var(--altura) * 2); 
+            height: var(--altura);
+            background-color: var(--color-destacado);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5em;
+            background-color: #f4f4f4;
+        }
+
+        .header__logo {
+            font-size: 0.1rem;
+            font-weight: bold;
+            color: var(--color-destacado);
+        }
+
+        .nav__list {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav__link {
+            color: var(--color-destacado);
+            text-decoration: none;
+        }
+
+        .search {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .search__input {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search__button {
+            padding: 0.5rem 1rem;
+            background-color: var(--color-destacado);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        img {
+            width:100px;
+            height:50px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo"><img src="./logo/logotipo.png"></div>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="#" class="nav__link">Inicio</a></li>
+                <li><a href="#" class="nav__link">Servicios</a></li>
+                <li><a href="#" class="nav__link">Contacto</a></li>
+            </ul>
+        </nav>
+        <form class="search">
+            <input type="text" class="search__input" placeholder="Buscar...">
+            <button class="search__button">Buscar</button>
+        </form>
+    </header>
+
+    <h1>Bienvenido a mi página</h1>
+    <p>Este es un párrafo con algunos <a href="#">enlaces</a> de ejemplo. También puedes visitar <a href="#">este otro sitio</a>.</p>
+    <div class="rectangulo"></div>
+</body>
+</html>
