@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1 - Variables CSS</title>
+    <style>
+        :root {
+            --color-destacado: #D95B43; /* Color para el título y los hipervínculos */
+            --fuente-principal: Arial, sans-serif;
+        }
+
+        body {
+            font-family: var(--fuente-principal);
+        }
+
+        h1 {
+            color: var(--color-destacado);
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        a {
+            color: var(--color-destacado);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .rectangulo {
+            --altura: 100px; /* Definimos la altura como una variable local */
+            width: calc(var(--altura) * 2); /* La anchura es el doble de la altura */
+            height: var(--altura);
+            background-color: var(--color-destacado);
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a mi página</h1>
+    <p>Este es un párrafo con algunos <a href="#">enlaces</a> de ejemplo. También puedes visitar <a href="#">este otro sitio</a>.</p>
+    <div class="rectangulo"></div>
+</body>
+</html>
