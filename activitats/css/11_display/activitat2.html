@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto Resaltado con Subrayado Extendido</title>
+    <style>
+        body {
+            font-family: "Georgia", serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+        }
+        .texto {
+            font-size: 1.2rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+        .subrayado {
+            background-color: rgba(255, 255, 0, 0.5); /* Fondo amarillo semitransparente */
+            padding: 2px;
+            font-weight: bold;
+            position: relative; /* Necesario para posicionar los pseudo-elementos */
+            display: inline-block; /* Permite ajustar el ancho del subrayado */
+        }
+        /* Subrayado extendido al principio */
+        .subrayado::before {
+            content: '';
+            position: absolute;
+            bottom: 0; /* Alinea el subrayado con la base del texto */
+            left: -10px; /* Extiende el subrayado hacia la izquierda */
+            width: 10px; /* Ancho del subrayado extendido */
+            height: 100%; /* Altura del subrayado (igual al texto) */
+            background-color: rgba(255, 255, 0, 0.5); /* Mismo color que el fondo */
+        }
+        /* Subrayado extendido al final */
+        .subrayado::after {
+            content: '';
+            position: absolute;
+            bottom: 0; /* Alinea el subrayado con la base del texto */
+            right: -10px; /* Extiende el subrayado hacia la derecha */
+            width: 10px; /* Ancho del subrayado extendido */
+            height: 100%; /* Altura del subrayado (igual al texto) */
+            background-color: rgba(255, 255, 0, 0.5); /* Mismo color que el fondo */
+        }
+    </style>
+</head>
+<body>
+    <p class="texto">
+        La historia de <strong class="subrayado">Moby Dick</strong> nos habla de la obsesión del capitán Ahab por capturar a la gran ballena blanca. 
+        Su deseo de venganza lo lleva a enfrentarse a las profundidades del mar, en una lucha que desafía los límites de la razón y la naturaleza.
+    </p>
+</body>
+</html>

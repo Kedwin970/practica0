@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Horizontal</title>
+    <style>
+        /* Resetear estilos por defecto de la lista */
+        ul {
+            list-style: none; /* Quita los puntos de la lista */
+            padding: 0; /* Elimina el padding por defecto */
+            margin: 0; /* Elimina el margen por defecto */
+            display: flex; /* Hace que los li se muestren en línea */
+            gap: 15px; /* Espacio entre los elementos */
+        }
+
+        /* Estilos para los enlaces */
+        ul li a {
+            text-decoration: none; /* Quita el subrayado de los enlaces */
+            color: #333; /* Color del texto */
+            font-size: 16px;
+            padding: 10px 15px; /* Espaciado interno */
+            background-color: #f0f0f0; /* Fondo de los botones */
+            border-radius: 5px; /* Bordes redondeados */
+            transition: background-color 0.3s ease; /* Transición suave */
+        }
+
+        /* Efecto hover para los enlaces */
+        ul li a:hover {
+            background-color: #ccc; /* Cambia el color de fondo al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
