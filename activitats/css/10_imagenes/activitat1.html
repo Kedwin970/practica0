@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat de Spider-Man y el Duende Verde</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+        }
+        .chat-container {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .mensaje {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+        .contenido {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 70%;
+        }
+        .nombre {
+            font-weight: bold;
+            color: #333;
+        }
+        .fecha {
+            font-size: 0.8rem;
+            color: gray;
+            margin-left: 10px;
+        }
+        .mensaje-usuario {
+            justify-content: flex-end;
+        }
+        .mensaje-usuario .contenido {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="mensaje">
+        <img src="./spidyyduende/spaidy.jpg" alt="Spider-Man" class="avatar">
+        <div class="contenido">
+            <p class="nombre">Spider-Man <span class="fecha">10:15 AM</span></p>
+            <p>¡Duende Verde! Deja de causar problemas en la ciudad.</p>
+        </div>
+    </div>
+
+    <div class="mensaje mensaje-usuario">
+        <div class="contenido">
+            <p class="nombre">Duende Verde <span class="fecha">10:16 AM</span></p>
+            <p>¡Ja! Parker, siempre metiéndote donde no te llaman.</p>
+        </div>
+        <img src="./spidyyduende/duendeverde.webp" alt="Duende Verde" class="avatar">
+    </div>
+
+    <div class="mensaje">
+        <img src="./spidyyduende/spaidy.jpg" alt="Spider-Man" class="avatar">
+        <div class="contenido">
+            <p class="nombre">Spider-Man <span class="fecha">10:17 AM</span></p>
+            <p>No dejaré que lastimes a más gente.</p>
+        </div>
+    </div>
+
+    <div class="mensaje mensaje-usuario">
+        <div class="contenido">
+            <p class="nombre">Duende Verde <span class="fecha">10:18 AM</span></p>
+            <p>Entonces ven a detenerme, arañita... ¡Si puedes!</p>
+        </div>
+        <img src="./spidyyduende/duendeverde.webp" alt="Duende Verde" class="avatar">
+    </div>
+</div>
+
+</body>
+</html>
+
