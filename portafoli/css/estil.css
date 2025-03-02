@@ -69,6 +69,31 @@ footer {
 }
 
 #moverizquierda{
+    width: 30px;
+    height: 30px;
 position: relative;
 left: -150px;
+    
+
 }
+.portada {
+    font-size: 60px;
+    font-family: "Arial", sans-serif;
+    color: #0e0d0d;
+    text-align: center;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}img {
+    width: 250px;
+    height: 250px;
+    }#mover{
+        position:relative
+    }
