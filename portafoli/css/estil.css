@@ -91,9 +91,13 @@ left: -150px;
     50% {
         transform: translateY(-20px);
     }
-}img {
+}
+.portafoli {
     width: 250px;
     height: 250px;
     }#mover{
         position:relative
     }
+.wireframe {
+    width: 700px
+}
